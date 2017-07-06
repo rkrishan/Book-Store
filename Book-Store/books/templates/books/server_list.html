@@ -1,0 +1,11 @@
+<h1>Books</h1>
+<ul>
+    {% for server in object_list %}
+    <li>{{ server.name }}  :  
+    <a href="{% url "server_delete" server.id %}">delete</a>
+	<a href="{% url "server_edit" server.id %}">edit</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "server_new" %}">New</a>
